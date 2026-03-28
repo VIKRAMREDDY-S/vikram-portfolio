@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="S. Vikram Reddy — Python & Django Developer. Entry-level software engineer building scalable web APIs and full-stack applications." />
+  <meta name="keywords" content="Vikram Reddy, Python Developer, Django, REST API, Software Engineer, Hyderabad" />
+  <title>S. Vikram Reddy — Python & Django Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Mono:wght@400;700&family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@1,600&family=Righteous&family=Bebas+Neue&family=Abril+Fatface&family=Orbitron:wght@700;900&family=Cinzel:wght@700&family=Lobster&display=swap" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ PRELOADER ═══════════════════ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">VR</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <div class="preloader-text">Initializing...</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CUSTOM CURSOR ═══════════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>VR<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <a href="#" class="btn-resume magnetic" id="resumeBtn">
+        <span>Resume</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        <span>Available for Opportunities</span>
+      </div>
+
+      <div class="hero-greeting reveal-up" style="--delay:0.1s">
+        <span class="greeting-line">Hello, World! I'm</span>
+      </div>
+
+      <!-- ★★★ MAGNETIC LETTER NAME ★★★ -->
+      <h1 class="hero-name" id="heroName">
+        <div class="name-row" id="nameRow1">
+          <span class="name-letter magnetic-letter" data-char="S">S</span>
+          <span class="name-letter magnetic-letter" data-char=".">.</span>
+          &nbsp;
+          <span class="name-letter magnetic-letter" data-char="V">V</span>
+          <span class="name-letter magnetic-letter" data-char="I">I</span>
+          <span class="name-letter magnetic-letter" data-char="K">K</span>
+          <span class="name-letter magnetic-letter" data-char="R">R</span>
+          <span class="name-letter magnetic-letter" data-char="A">A</span>
+          <span class="name-letter magnetic-letter" data-char="M">M</span>
+        </div>
+        <div class="name-row accent-row" id="nameRow2">
+          <span class="name-letter magnetic-letter accent" data-char="R">R</span>
+          <span class="name-letter magnetic-letter accent" data-char="E">E</span>
+          <span class="name-letter magnetic-letter accent" data-char="D">D</span>
+          <span class="name-letter magnetic-letter accent" data-char="D">D</span>
+          <span class="name-letter magnetic-letter accent" data-char="Y">Y</span>
+        </div>
+      </h1>
+
+      <div class="hero-roles reveal-up" style="--delay:0.3s">
+        <span class="role-static">I craft </span>
+        <span class="typing-wrapper">
+          <span class="typing-text" id="typingText"></span>
+          <span class="typing-cursor">|</span>
+        </span>
+      </div>
+
+      <p class="hero-bio reveal-up" style="--delay:0.4s">
+        CS graduate from Saveetha University (CGPA 8.15) passionate about building scalable
+        web APIs, OCR pipelines, and full-stack applications. Certified Salesforce AI Specialist
+        based in Hyderabad, India.
+      </p>
+
+      <div class="hero-cta reveal-up" style="--delay:0.5s">
+        <a href="#projects" class="btn-primary magnetic">
+          <span>View My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-outline magnetic">
+          <span>Let's Talk</span>
+        </a>
+      </div>
+
+      <div class="hero-socials reveal-up" style="--delay:0.6s">
+        <a href="https://github.com/VIKRAMREDDY-S" target="_blank" class="social-link magnetic" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/vikram-reddy-s-041685286" target="_blank" class="social-link magnetic" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:sangamvikramreddy@gmail.com" class="social-link magnetic" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+
+    <!-- Floating blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// about me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-card-3d" id="aboutCard">
+            <div class="about-avatar">
+              <div class="avatar-initials">VR</div>
+              <div class="avatar-ring ring-1"></div>
+              <div class="avatar-ring ring-2"></div>
+              <div class="avatar-ring ring-3"></div>
+            </div>
+            <div class="floating-badge badge-python">
+              <i class="fab fa-python"></i> Python
+            </div>
+            <div class="floating-badge badge-django">
+              <i class="fas fa-server"></i> Django
+            </div>
+            <div class="floating-badge badge-api">
+              <i class="fas fa-plug"></i> REST API
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <p class="about-intro">
+            I'm a <span class="highlight">Python & Django Developer</span> who loves turning complex problems
+            into elegant, scalable solutions. Fresh out of my CS degree (Class of 2024), I've already
+            built production-ready APIs, OCR pipelines, and full-stack apps.
+          </p>
+          <p class="about-body">
+            Based in <span class="highlight">Hyderabad, India</span>, I'm actively seeking my first full-time
+            role where I can contribute to real-world engineering challenges. I'm a certified
+            Salesforce AI Specialist and a fast learner who thrives at the intersection of
+            backend systems and clean API design.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="8.15">0</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+            <div class="stat-card reveal-up" style="--delay:0.1s">
+              <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card reveal-up" style="--delay:0.2s">
+              <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn-primary magnetic"><span>Hire Me</span><i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn-ghost magnetic" id="downloadResume"><i class="fas fa-download"></i><span>Download CV</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// skills</span>
+        <h2 class="section-title">My Toolkit</h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skill-group reveal-up">
+          <h3 class="skill-group-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-header"><span>Python</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>JavaScript (ES6+)</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>SQL</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-group reveal-up" style="--delay:0.1s">
+          <h3 class="skill-group-title"><i class="fas fa-layer-group"></i> Frameworks</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-header"><span>Django</span><span>88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>Django REST Framework</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>OpenCV</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-group reveal-up" style="--delay:0.2s">
+          <h3 class="skill-group-title"><i class="fas fa-database"></i> Databases</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-header"><span>MySQL</span><span>82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>SQLite</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header"><span>PostgreSQL</span><span>55%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-group reveal-up" style="--delay:0.3s">
+          <h3 class="skill-group-title"><i class="fas fa-tools"></i> Tools & Other</h3>
+          <div class="skill-tags">
+            <span class="stag">Git</span>
+            <span class="stag">GitHub</span>
+            <span class="stag">Postman</span>
+            <span class="stag">REST API</span>
+            <span class="stag">Linux/CLI</span>
+            <span class="stag">HTML5</span>
+            <span class="stag">CSS3</span>
+            <span class="stag">JSON</span>
+            <span class="stag">OOP</span>
+            <span class="stag">Claude AI</span>
+            <span class="stag">Copilot</span>
+            <span class="stag">Tesseract</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Orbit -->
+      <div class="tech-orbit reveal-up">
+        <div class="orbit-center">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="orbit orbit-1">
+          <div class="orbit-item" style="--angle:0deg"><i class="fab fa-django" title="Django"></i></div>
+          <div class="orbit-item" style="--angle:90deg"><i class="fab fa-js-square" title="JavaScript"></i></div>
+          <div class="orbit-item" style="--angle:180deg"><i class="fab fa-github" title="GitHub"></i></div>
+          <div class="orbit-item" style="--angle:270deg"><i class="fas fa-database" title="Database"></i></div>
+        </div>
+        <div class="orbit orbit-2">
+          <div class="orbit-item" style="--angle:45deg"><i class="fab fa-linux" title="Linux"></i></div>
+          <div class="orbit-item" style="--angle:135deg"><i class="fas fa-plug" title="REST API"></i></div>
+          <div class="orbit-item" style="--angle:225deg"><i class="fab fa-html5" title="HTML5"></i></div>
+          <div class="orbit-item" style="--angle:315deg"><i class="fas fa-eye" title="OpenCV"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: OCR -->
+        <div class="project-card reveal-up" data-project="ocr">
+          <div class="card-glow"></div>
+          <div class="card-number">01</div>
+          <div class="card-icon"><i class="fas fa-file-image"></i></div>
+          <h3 class="card-title">OCR Text Extraction System</h3>
+          <p class="card-desc">Image-to-text pipeline with OpenCV preprocessing achieving ~92% accuracy on documents. Exposed as a Django REST API endpoint.</p>
+          <div class="card-tags">
+            <span>Python</span><span>OpenCV</span><span>Tesseract</span><span>DRF</span>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn-view" onclick="openModal('ocr')">View Details</button>
+            <a href="https://github.com/VIKRAMREDDY-S" target="_blank" class="card-btn-gh"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2: Task Manager -->
+        <div class="project-card reveal-up" style="--delay:0.1s" data-project="task">
+          <div class="card-glow"></div>
+          <div class="card-number">02</div>
+          <div class="card-icon"><i class="fas fa-tasks"></i></div>
+          <h3 class="card-title">Task Manager Web App</h3>
+          <p class="card-desc">Full-stack app with user auth, CRUD, task filtering, and a responsive frontend. Token-based auth via DRF serializers.</p>
+          <div class="card-tags">
+            <span>Django</span><span>DRF</span><span>SQLite</span><span>HTML5</span><span>CSS3</span>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn-view" onclick="openModal('task')">View Details</button>
+            <a href="https://github.com/VIKRAMREDDY-S/task-manager" target="_blank" class="card-btn-gh"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 3: URL Shortener -->
+        <div class="project-card reveal-up" style="--delay:0.2s" data-project="url">
+          <div class="card-glow"></div>
+          <div class="card-number">03</div>
+          <div class="card-icon"><i class="fas fa-link"></i></div>
+          <h3 class="card-title">URL Shortener API</h3>
+          <p class="card-desc">REST API accepting long URLs, returning shortened slugs with redirect handling and click-count tracking. Full validation & error handling.</p>
+          <div class="card-tags">
+            <span>Django</span><span>DRF</span><span>SQLite</span><span>Python</span>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn-view" onclick="openModal('url')">View Details</button>
+            <a href="https://github.com/VIKRAMREDDY-S/url-shortener" target="_blank" class="card-btn-gh"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 4: Rain Detector -->
+        <div class="project-card reveal-up" style="--delay:0.3s" data-project="rain">
+          <div class="card-glow"></div>
+          <div class="card-number">04</div>
+          <div class="card-icon"><i class="fas fa-cloud-rain"></i></div>
+          <h3 class="card-title">Rain Detector Alarm System</h3>
+          <p class="card-desc">IoT-based alert system using Python to detect rainfall via embedded sensors and dispatch real-time automated notifications.</p>
+          <div class="card-tags">
+            <span>Python</span><span>IoT</span><span>Embedded Sensors</span>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn-view" onclick="openModal('rain')">View Details</button>
+            <a href="https://github.com/VIKRAMREDDY-S" target="_blank" class="card-btn-gh"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECT MODALS ═══════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+  <!-- OCR Modal -->
+  <div class="modal" id="modal-ocr">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon"><i class="fas fa-file-image"></i></div>
+      <div>
+        <h3>OCR Text Extraction System</h3>
+        <span class="modal-num">Project 01</span>
+      </div>
+    </div>
+    <p class="modal-desc">Built a production-ready image-to-text pipeline using OpenCV preprocessing techniques including thresholding, deskewing, and noise removal. Achieved ~92% accuracy on test documents. Exposed as a Django REST Framework API endpoint that returns structured JSON — ready for integration into document digitization workflows.</p>
+    <div class="modal-tech">
+      <h4>Tech Stack</h4>
+      <div class="modal-tags"><span>Python</span><span>OpenCV</span><span>Tesseract OCR</span><span>Django REST Framework</span><span>JSON</span></div>
+    </div>
+    <div class="modal-links">
+      <a href="https://github.com/VIKRAMREDDY-S" target="_blank" class="btn-primary magnetic"><i class="fab fa-github"></i><span>View on GitHub</span></a>
+    </div>
+  </div>
+
+  <!-- Task Manager Modal -->
+  <div class="modal" id="modal-task">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon"><i class="fas fa-tasks"></i></div>
+      <div>
+        <h3>Task Manager Web App</h3>
+        <span class="modal-num">Project 02</span>
+      </div>
+    </div>
+    <p class="modal-desc">Full-stack task management application featuring user authentication (register/login/logout), complete CRUD operations, task status filtering, and a responsive frontend built with vanilla HTML/CSS/JS. The backend is a RESTful API powered by Django REST Framework with DRF serializers and token-based authentication following REST best practices.</p>
+    <div class="modal-tech">
+      <h4>Tech Stack</h4>
+      <div class="modal-tags"><span>Django</span><span>DRF</span><span>SQLite</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Token Auth</span></div>
+    </div>
+    <div class="modal-links">
+      <a href="https://github.com/VIKRAMREDDY-S/task-manager" target="_blank" class="btn-primary magnetic"><i class="fab fa-github"></i><span>View on GitHub</span></a>
+    </div>
+  </div>
+
+  <!-- URL Shortener Modal -->
+  <div class="modal" id="modal-url">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon"><i class="fas fa-link"></i></div>
+      <div>
+        <h3>URL Shortener API</h3>
+        <span class="modal-num">Project 03</span>
+      </div>
+    </div>
+    <p class="modal-desc">A clean REST API that accepts long URLs and returns shortened slugs. Features include redirect handling (301 redirects), click-count tracking, input validation, comprehensive error handling, and JSON response formatting following REST best practices. Fully documented and testable via Postman.</p>
+    <div class="modal-tech">
+      <h4>Tech Stack</h4>
+      <div class="modal-tags"><span>Django</span><span>DRF</span><span>SQLite</span><span>Python</span><span>REST API</span><span>Postman</span></div>
+    </div>
+    <div class="modal-links">
+      <a href="https://github.com/VIKRAMREDDY-S/url-shortener" target="_blank" class="btn-primary magnetic"><i class="fab fa-github"></i><span>View on GitHub</span></a>
+    </div>
+  </div>
+
+  <!-- Rain Modal -->
+  <div class="modal" id="modal-rain">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon"><i class="fas fa-cloud-rain"></i></div>
+      <div>
+        <h3>Rain Detector Alarm System</h3>
+        <span class="modal-num">Project 04</span>
+      </div>
+    </div>
+    <p class="modal-desc">An IoT-based alert system leveraging Python and embedded rain sensors. The system detects rainfall in real time and dispatches automated notifications/alarms. This project demonstrates the integration of Python with hardware sensor data streams and real-time event-driven programming.</p>
+    <div class="modal-tech">
+      <h4>Tech Stack</h4>
+      <div class="modal-tags"><span>Python</span><span>IoT</span><span>Embedded Sensors</span><span>Real-time Systems</span></div>
+    </div>
+    <div class="modal-links">
+      <a href="https://github.com/VIKRAMREDDY-S" target="_blank" class="btn-primary magnetic"><i class="fab fa-github"></i><span>View on GitHub</span></a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ EDUCATION ═══════════════════ -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// education & certifications</span>
+        <h2 class="section-title">My Journey</h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal-left">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-content">
+            <span class="edu-date">2020 — 2024</span>
+            <h3>B.E. Computer Science & Engineering</h3>
+            <p class="edu-school">Saveetha University</p>
+            <div class="edu-cgpa">
+              <span class="cgpa-label">CGPA</span>
+              <span class="cgpa-value">8.15 / 10</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="certs-grid reveal-right">
+          <h3 class="certs-title">Certifications</h3>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <strong>Salesforce AI Specialist</strong>
+              <span>Salesforce</span>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <strong>Salesforce AI Associate</strong>
+              <span>Salesforce</span>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+            <div>
+              <strong>Career Essentials in Software Development</strong>
+              <span>Microsoft / LinkedIn</span>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+            <div>
+              <strong>Social Networks</strong>
+              <span>NPTEL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-sub">Have an opportunity or a project in mind? I'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:sangamvikramreddy@gmail.com">sangamvikramreddy@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-linkedin-in"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://linkedin.com/in/vikram-reddy-s-041685286" target="_blank">vikram-reddy-s</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/VIKRAMREDDY-S" target="_blank">VIKRAMREDDY-S</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <span>Hyderabad, India</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-right" id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="formName" placeholder=" " required />
+            <label for="formName">Your Name</label>
+            <span class="form-error" id="nameError">Name is required</span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="formEmail" placeholder=" " required />
+            <label for="formEmail">Your Email</label>
+            <span class="form-error" id="emailError">Valid email is required</span>
+          </div>
+          <div class="form-group">
+            <input type="text" id="formSubject" placeholder=" " required />
+            <label for="formSubject">Subject</label>
+            <span class="form-error" id="subjectError">Subject is required</span>
+          </div>
+          <div class="form-group">
+            <textarea id="formMessage" placeholder=" " rows="5" required></textarea>
+            <label for="formMessage">Message</label>
+            <span class="form-error" id="msgError">Message is required</span>
+          </div>
+          <button type="submit" class="btn-primary magnetic form-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <span>Message sent! I'll get back to you soon.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>VR<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-text">Designed & Built by S. Vikram Reddy &nbsp;·&nbsp; 2024</p>
+        <div class="footer-socials">
+          <a href="https://github.com/VIKRAMREDDY-S" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/vikram-reddy-s-041685286" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:sangamvikramreddy@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
