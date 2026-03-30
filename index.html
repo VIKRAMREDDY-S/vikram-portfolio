@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vikram Reddy | Developer</title>
 
-  <!-- Google Font -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- ScrollReveal -->
+  <!-- Libraries -->
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
+<div id="particles-js"></div>
+<div class="cursor"></div>
+
+<!-- NAV -->
 <nav>
   <h2>Vikram</h2>
   <div>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+    <button onclick="toggleTheme()">🌙</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <h1>Hi, I'm Vikram 👋</h1>
-  <p>Python & Django Developer | Building Scalable Web Apps</p>
-  <button onclick="scrollToSection('projects')">View Projects</button>
+  <h2><span id="typing"></span></h2>
+
+  <div class="buttons">
+    <button onclick="scrollToSection('projects')">View Projects</button>
+    <a href="resume.pdf" download><button>Download Resume</button></a>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
   <h2>About Me</h2>
   <div class="card">
-    <p>
-      I'm a passionate developer focused on Python and Django. 
-      I love building fast, scalable, and user-friendly applications.
-    </p>
+    Passionate Python & Django Developer building scalable web apps.
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
   <h2>Projects</h2>
-
   <div class="grid">
+
     <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Modern portfolio using HTML, CSS, JS</p>
+      <img src="https://via.placeholder.com/300"/>
+      <h3>Portfolio</h3>
+      <p>Modern animated portfolio</p>
     </div>
 
     <div class="card">
-      <h3>Django Blog App</h3>
-      <p>Full-stack blog platform with authentication</p>
+      <img src="https://via.placeholder.com/300"/>
+      <h3>Django App</h3>
+      <p>Full-stack web app</p>
     </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Contact</h2>
-  <div class="card">
-    <p>Email: yourmail@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-  </div>
+
+  <form id="contact-form">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
 <footer>
-  <p>© 2026 Vikram Reddy</p>
+  © 2026 Vikram Reddy
 </footer>
 
 <script src="script.js"></script>
