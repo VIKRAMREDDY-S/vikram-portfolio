@@ -2,95 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vikram Reddy | Web Developer</title>
-
-  <meta name="description" content="Vikram Reddy portfolio - Web Developer skilled in HTML, CSS, JavaScript">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikram Reddy | Developer</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-    }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    header {
-      text-align: center;
-      padding: 100px 20px;
-    }
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    h1 { font-size: 40px; color: #38bdf8; }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-      margin-right: 10px;
-    }
-  </style>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-
 <body>
 
-<header>
-  <h1>Hi, I'm Vikram Reddy</h1>
-  <p>Frontend Web Developer | JavaScript | React</p>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <h2>Vikram</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section>
+<!-- HERO -->
+<section class="hero">
+  <h1>Hi, I'm Vikram 👋</h1>
+  <p>Python & Django Developer | Building Scalable Web Apps</p>
+  <button onclick="scrollToSection('projects')">View Projects</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
   <h2>About Me</h2>
-  <p>
-    I am Vikram Reddy, a passionate web developer who builds modern,
-    responsive websites using HTML, CSS, and JavaScript.
-  </p>
+  <div class="card">
+    <p>
+      I'm a passionate developer focused on Python and Django. 
+      I love building fast, scalable, and user-friendly applications.
+    </p>
+  </div>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML, CSS, JavaScript</li>
-    <li>React (Learning)</li>
-    <li>Git & GitHub</li>
-  </ul>
-</section>
-
-<section>
+<!-- PROJECTS -->
+<section id="projects" class="section">
   <h2>Projects</h2>
 
-  <div class="card">
-    <h3>Portfolio Website</h3>
-    <p>Built a personal portfolio using HTML, CSS, JavaScript.</p>
-    <a href="#">Live</a>
-    <a href="#">Code</a>
-  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Modern portfolio using HTML, CSS, JS</p>
+    </div>
 
-  <div class="card">
-    <h3>Calculator App</h3>
-    <p>Simple calculator using JavaScript.</p>
-    <a href="#">Live</a>
-    <a href="#">Code</a>
+    <div class="card">
+      <h3>Django Blog App</h3>
+      <p>Full-stack blog platform with authentication</p>
+    </div>
   </div>
-
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact" class="section">
   <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>GitHub: https://github.com/yourusername</p>
+  <div class="card">
+    <p>Email: yourmail@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+  </div>
 </section>
 
+<footer>
+  <p>© 2026 Vikram Reddy</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
